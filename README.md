@@ -1,0 +1,4 @@
+requirejsexample
+================
+
+example using requirejs
