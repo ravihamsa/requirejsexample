@@ -9,7 +9,7 @@ define(['backbone'],function  (argument) {
 	});
 
 	var Model = Backbone.Model.extend({
-		defualts:{
+		defaults:{
 			pageName:'base'
 		}
 	});
