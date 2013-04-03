@@ -1,27 +1,21 @@
-define(['backbone'],function  (argument) {
-	
-	
-	var View = Backbone.View.extend({
-		render:function(){
-			this.$el.html('base view');
-			return this;
-		}
-	});
-
-	var Model = Backbone.Model.extend({
-		defaults:{
-			pageName:'base'
-		}
-	});
+define(['app','backbone'],function  (app) {
 
 
-	var BasePage = {
-		View:View,
-		Model:Model
-	};
 
-	return _.extend(BasePage, {
 
-	}, Backbone.Events);
+    var View = Backbone.View.extend({
+        pageName:'basePage',
+        render:function(){
+            this.$el.html(this.pageName);
+        }
+    });
 
+    var Model = Backbone.Model.extend({
+
+    })
+
+    return {
+        View:View,
+        Model:Model
+    }
 });

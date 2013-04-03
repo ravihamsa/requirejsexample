@@ -1,7 +1,8 @@
 //app.js
 define(['backbone'],function () {
 	var app = {
-		root:'/'
+		root:'/',
+        pageNode:$('#main')
 	}
 
 	return  _.extend(app, {

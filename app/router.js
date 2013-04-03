@@ -14,8 +14,12 @@ define(['backbone'],function(){
 			Backbone.history.navigate('page/test/param1=testparam1;param2=testparam2',{trigger:true});
 		},
 		loadPage:function(pageId, params){
-			console.log(arguments);
-			$('body').html(pageId + '00000000'+params);
+		    require(["pages/"+pageId],function(Page){
+    	        var page = new Page.View({
+                    el:'#main'
+                });
+                page.render();
+		    });
 		}
 	});
 
